@@ -17,7 +17,7 @@ const findWords = (inputString: string, WORDS: string[]): string[] => {
   let validWords: { [key: string]: boolean } = {};
 
   // Helper function to generate all permutations
-  function permute(prefix, input) {
+  function permute(prefix: string, input: string) {
     let length = input.length;
 
     if (length === 0) {
@@ -45,7 +45,6 @@ const findWords = (inputString: string, WORDS: string[]): string[] => {
   return Object.keys(validWords);
 };
 
-// Usage
 const WORDS: string[] = ["good", "god", "dog", "goo", "do", "go", "og", "d"];
 const inputString: string = "oogd";
 console.log(findWords(inputString, WORDS));
